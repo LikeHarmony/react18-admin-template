@@ -11,6 +11,7 @@ import { BreadcrumbMap, MenuItem, MenuRoute, RoutesType } from './interface'
 
 // https://legacy.reactjs.org/docs/code-splitting.html#route-based-code-splitting
 // home
+const Mediarecorder = lazy(() => import('../pages/mediaRecorder'))
 const Dashboard = lazy(() => import('../pages/dashboard'))
 const Login = lazy(() => import('../pages/Login'))
 
@@ -34,6 +35,11 @@ const menuRoutes: MenuRoute[] = [
         path: '/home',
         icon: <DesktopOutlined />,
         element: <Dashboard />
+      },
+      {
+        name: '屏幕录制',
+        path: '/mediaRecorder',
+        element: <Mediarecorder />
       },
       {
         name: 'Vue',
